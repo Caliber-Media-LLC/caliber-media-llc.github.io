@@ -3,7 +3,7 @@
 // Where the Engine installer lives. Change this one line when the release is published.
 // GitHub Releases (a public repo): https://github.com/<user>/<repo>/releases/latest
 var CALIBER = {
-  downloadUrl: 'https://github.com/Caliber-Media-LLC/caliber-releases/releases/latest',
+  downloadUrl: 'https://github.com/Caliber-Media-LLC/caliber-releases/releases/latest/download/CaliberEngine_Setup.exe',
   version: null // filled from patchnotes.json
 };
 
