@@ -23,7 +23,9 @@
         {
           "name": "BUG FIXES",
           "items": [
-            "MIN and CLOSE on the engine window each fire once — the injected script now replaces the inline click handler instead of adding a second one on top of it"
+            "MIN and CLOSE on the engine window each fire once — the injected script now replaces the inline click handler instead of adding a second one on top of it",
+            "The command guide, the Active Commands pane, Stats and Duplicate Profile work inside the CaliberEngine window — they were answering \"Not found\" because only CaliberHQ knew how to serve them",
+            "The PC Commands pane inside the CaliberEngine window can save again — it was failing with \"Failed to fetch\""
           ]
         }
       ]
