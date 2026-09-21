@@ -1,7 +1,8 @@
 /* Caliber Media site — tiny helpers. No frameworks, no tracking. */
 
-// Where the Engine installer lives. Change this one line when the release is published.
-// GitHub Releases (a public repo): https://github.com/<user>/<repo>/releases/latest
+// Where the Engine installer lives. The button starts on the fixed-name fallback below, then
+// switches to whatever installer (.exe) is attached to the newest GitHub release, so a new
+// release goes live on the site without touching this file.
 var CALIBER = {
   downloadUrl: 'https://github.com/Caliber-Media-LLC/caliber-releases/releases/latest/download/CaliberEngine_Setup.exe',
   version: null // filled from patchnotes.json
@@ -13,7 +14,17 @@ var CALIBER = {
   if (y) y.textContent = new Date().getFullYear();
 
   // every element that wants the download link
-  document.querySelectorAll('[data-download]').forEach(function (a) { a.href = CALIBER.downloadUrl; });
+  var dlEls = document.querySelectorAll('[data-download]');
+  dlEls.forEach(function (a) { a.href = CALIBER.downloadUrl; });
+  fetch('https://api.github.com/repos/Caliber-Media-LLC/caliber-releases/releases/latest')
+    .then(function (r) { return r.json(); })
+    .then(function (rel) {
+      var exe = (rel.assets || []).filter(function (a) { return /\.exe$/i.test(a.name); })[0];
+      if (exe && exe.browser_download_url) {
+        CALIBER.downloadUrl = exe.browser_download_url;
+        dlEls.forEach(function (a) { a.href = CALIBER.downloadUrl; });
+      }
+    }).catch(function () { /* keep the fallback link */ });
 
   // patch notes + version label
   var box = document.getElementById('patchnotes');
