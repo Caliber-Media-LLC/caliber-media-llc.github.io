@@ -241,3 +241,8 @@ p+p{margin-top:14px}
 .rel li,.rel .date{color:var(--white)}
 .beta-pill{background:transparent;color:var(--white);border:1px solid var(--white)}
 .beta-pill{color:var(--white);border-color:var(--white)}
+
+.plist{list-style:none;margin-top:6px}
+.plist li{position:relative;padding-left:20px;margin:8px 0;color:var(--white);font-size:.98rem}
+.plist li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:2px;background:var(--army)}
+.plist b{color:var(--army)}
