@@ -240,4 +240,4 @@ p+p{margin-top:14px}
 #patchnotes{max-height:520px;overflow-y:auto;overscroll-behavior:contain;padding-right:10px;scrollbar-color:var(--army) var(--surface)}
 .rel li,.rel .date{color:var(--white)}
 .beta-pill{background:transparent;color:var(--white);border:1px solid var(--white)}
-.beta-pill{color:var(--army);border-color:var(--army)}
+.beta-pill{color:var(--white);border-color:var(--white)}
