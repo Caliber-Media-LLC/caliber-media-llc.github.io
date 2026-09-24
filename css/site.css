@@ -58,6 +58,7 @@ p+p{margin-top:14px}
 .btn:hover{background:rgba(255,204,1,.1);color:var(--gold)}
 .btn.primary{background:var(--gold);color:#0D0D0D}
 .btn.primary:hover{background:#fff;border-color:#fff;color:#0D0D0D}
+.btn.soon,.btn.soon:hover{border-color:var(--border);color:var(--muted);background:transparent;cursor:default}
 .btn.ghost{border-color:var(--border);color:var(--white)}
 .btn.ghost:hover{border-color:var(--white);background:transparent;color:#fff}
 
