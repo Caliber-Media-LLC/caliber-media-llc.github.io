@@ -16,8 +16,11 @@
     var buy = (v.steam || v.store) ? '<div class="buy">' +
       (v.steam ? '<a class="btn primary" href="' + esc(v.steam) + '" rel="noopener">Steam</a>' : '') +
       (v.store ? '<a class="btn" href="' + esc(v.store) + '">CaliberSite</a>' : '') + '</div>' : '';
-    return '<article class="char"><div class="pic">' +
-      '<img src="assets/portraits/' + esc(v.img) + '" alt="Portrait of ' + esc(v.name) + '" loading="lazy">' +
+    var play = v.samples && v.samples.length ?
+      '<button type="button" class="play" data-voice="' + CALIBER_VOICES.indexOf(v) + '" aria-label="Hear ' + esc(v.name) + '"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+      '<path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>' : '';
+    return '<article class="char' + (play ? ' has-sample' : '') + '"><div class="pic">' +
+      '<img src="assets/portraits/' + esc(v.img) + '" alt="Portrait of ' + esc(v.name) + '" loading="lazy">' + play +
       '<span class="rating ' + ratingClass[v.rating] + '" aria-label="Rated ' + esc(v.rating) + '">' + esc(v.rating) + '</span>' +
       ((v.steam || v.store) ? '' : '<span class="demo soon">Coming soon</span>') +
       '</div><div class="body"><h3>' + esc(v.name) + '</h3><p>' + esc(v.desc) + '</p>' +
@@ -37,6 +40,26 @@
       '<p class="sub">No voices match yet. More are on the way.</p>';
     if (count) count.textContent = list.length + (list.length === 1 ? ' voice' : ' voices');
   }
+
+  // voice samples — click a card (or its speaker button) to hear a random line; one clip at a time
+  var audio = new Audio(), lastClip = null, playingCard = null;
+  function stopped() { if (!audio.paused) return; if (playingCard) playingCard.classList.remove('playing'); playingCard = null; }
+  audio.addEventListener('ended', stopped);
+  audio.addEventListener('pause', stopped);
+  grid.addEventListener('click', function (e) {
+    if (e.target.closest('a')) return;
+    var cardEl = e.target.closest('.char.has-sample');
+    if (!cardEl) return;
+    var v = CALIBER_VOICES[+cardEl.querySelector('.play').getAttribute('data-voice')];
+    var pool = v.samples.length > 1 ? v.samples.filter(function (s) { return s !== lastClip; }) : v.samples;
+    var clip = pool[Math.floor(Math.random() * pool.length)];
+    audio.pause();
+    if (playingCard) playingCard.classList.remove('playing');
+    playingCard = null;
+    lastClip = clip;
+    audio.src = 'assets/voice-samples/' + clip;
+    audio.play().then(function () { playingCard = cardEl; cardEl.classList.add('playing'); }, function () {});
+  });
 
   // filter bar — genres are collected from the data, so a new genre gets a button automatically
   function uniq(arr) { return arr.filter(function (x, i) { return arr.indexOf(x) === i; }); }
