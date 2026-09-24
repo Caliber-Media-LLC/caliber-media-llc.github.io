@@ -18,8 +18,8 @@ var CALIBER_VOICES = [
     desc: 'An assistant AI with a sharp edge.' },
   { name: 'Divergence-7',  img: 'divergence-7.jpg',  gender: 'Male',   rating: 'PG',    genres: ['Sci-Fi', 'Space', 'Factory'],
     desc: 'Androgynous and robotic, and not quite the same as Convergence-7.' },
-  { name: 'Apparition',    img: 'apparition.jpg',    gender: 'Female', rating: 'PG-13', genres: ['ARPG', 'RPG', 'MMO', 'Haunted'],
+  { name: 'Apparition',    img: 'apparition.jpg',    gender: 'Female', rating: 'PG-13', genres: ['ARPG', 'RPG', 'MMO'],
     desc: 'A whisper that seems to know where you are.' },
-  { name: 'Phantom',       img: 'phantom.jpg',       gender: 'Male',   rating: 'PG-13', genres: ['ARPG', 'RPG', 'MMO', 'Haunted'],
+  { name: 'Phantom',       img: 'phantom.jpg',       gender: 'Male',   rating: 'PG-13', genres: ['ARPG', 'RPG', 'MMO'],
     desc: 'Cold, close and quiet.' }
 ];
