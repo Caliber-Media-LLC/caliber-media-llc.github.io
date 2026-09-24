@@ -19,7 +19,7 @@
     return '<article class="char"><div class="pic">' +
       '<img src="assets/portraits/' + esc(v.img) + '" alt="Portrait of ' + esc(v.name) + '" loading="lazy">' +
       '<span class="rating ' + ratingClass[v.rating] + '" aria-label="Rated ' + esc(v.rating) + '">' + esc(v.rating) + '</span>' +
-      (v.demo ? '<span class="demo">Free demo</span>' : '') +
+      (v.demo ? '<span class="demo">Free demo</span>' : (v.steam || v.store) ? '' : '<span class="demo soon">Coming soon</span>') +
       '</div><div class="body"><h3>' + esc(v.name) + '</h3><p>' + esc(v.desc) + '</p>' +
       '<div class="tags">' + tags + '</div>' + buy + '</div></article>';
   }

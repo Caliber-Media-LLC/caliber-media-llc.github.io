@@ -130,6 +130,7 @@ p+p{margin-top:14px}
 .rating.g{color:#7FC98B;border-color:#7FC98B} .rating.pg{color:var(--army);border-color:var(--army)}
 .rating.pg13{color:var(--gold);border-color:var(--gold)} .rating.r{color:#E07A6B;border-color:#E07A6B}
 .char .demo{position:absolute;top:12px;left:12px;z-index:1;font-family:var(--font-ui);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;background:var(--gold);color:#0D0D0D;padding:4px 9px}
+.char .demo.soon{background:rgba(13,13,13,.85);color:var(--white);border:2px solid var(--white);padding:2px 8px}
 .char .body{padding:4px 18px 20px;display:flex;flex-direction:column;flex:1}
 .char h3{font-size:1.7rem;margin-bottom:0}
 .char .who{font-family:var(--font-ui);font-weight:600;color:var(--white);letter-spacing:.14em;font-size:.9rem;text-transform:uppercase;margin-bottom:8px}

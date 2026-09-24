@@ -5,6 +5,7 @@
      genres  any labels — new ones show up as filter buttons on their own
      demo    true = ships free with CaliberEngine
      steam / store  optional buy links for this voice (card shows buttons when set)
+                    no demo and no links = card shows a COMING SOON badge
    Order here = order on the page. */
 var CALIBER_VOICES = [
   { name: 'Shade',         img: 'shade.jpg',         gender: 'Male',   rating: 'PG-13', genres: ['FPS', 'Survival', 'Co-op', 'Battle Royale'], demo: true,
