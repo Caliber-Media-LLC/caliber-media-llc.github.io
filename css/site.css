@@ -115,13 +115,35 @@ p+p{margin-top:14px}
 
 /* ---- character cards ---- */
 .chars{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
-.char{background:var(--panel);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column}
-.char img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 22%;background:#000}
+.char{position:relative;background:var(--panel);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s}
+.char::before{content:"";position:absolute;inset:-1px;pointer-events:none;z-index:2;
+  background:
+    linear-gradient(var(--gold),var(--gold)) 0 0/18px 2px no-repeat,linear-gradient(var(--gold),var(--gold)) 0 0/2px 18px no-repeat,
+    linear-gradient(var(--gold),var(--gold)) 100% 100%/18px 2px no-repeat,linear-gradient(var(--gold),var(--gold)) 100% 100%/2px 18px no-repeat}
+.char:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 10px 28px rgba(0,0,0,.6),0 0 0 1px rgba(255,204,1,.25)}
+.char .pic{position:relative;overflow:hidden}
+.char .pic::after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(transparent,var(--panel));pointer-events:none}
+.char img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 22%;background:#000;display:block;transition:transform .4s}
+.char:hover img{transform:scale(1.04)}
 .char.wide img{aspect-ratio:16/9;object-position:center}
-.char .body{padding:16px 18px 20px}
-.char h3{font-size:1.5rem;margin-bottom:2px}
-.char .who{font-family:var(--font-ui);color:var(--army);letter-spacing:.08em;font-size:.95rem;text-transform:uppercase;margin-bottom:8px}
-.char p{color:var(--muted);font-size:.96rem}
+.char .rating{position:absolute;top:12px;right:12px;z-index:1;font-family:var(--font-d);font-size:1.25rem;letter-spacing:.06em;line-height:1;padding:6px 10px 4px;border:2px solid;background:rgba(13,13,13,.85)}
+.rating.g{color:#7FC98B;border-color:#7FC98B} .rating.pg{color:var(--army);border-color:var(--army)}
+.rating.pg13{color:var(--gold);border-color:var(--gold)} .rating.r{color:#E07A6B;border-color:#E07A6B}
+.char .demo{position:absolute;top:12px;left:12px;z-index:1;font-family:var(--font-ui);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;background:var(--gold);color:#0D0D0D;padding:4px 9px}
+.char .body{padding:4px 18px 20px;display:flex;flex-direction:column;flex:1}
+.char h3{font-size:1.7rem;margin-bottom:0}
+.char .who{font-family:var(--font-ui);font-weight:600;color:var(--white);letter-spacing:.14em;font-size:.9rem;text-transform:uppercase;margin-bottom:8px}
+.char p{color:var(--muted);font-size:.96rem;margin-bottom:14px}
+.char .tags{margin-top:auto}
+.char .buy{display:flex;gap:8px;margin-top:12px}
+.char .buy .btn{flex:1;justify-content:center;padding:10px 12px;font-size:.85rem;min-height:44px}
+.filters{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.fgroup{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.flabel{font-family:var(--font-ui);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;color:var(--army);width:72px}
+.chip{font-family:var(--font-ui);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.85rem;background:transparent;color:var(--muted);border:1px solid var(--border);padding:6px 12px;min-height:36px;cursor:pointer}
+.chip:hover{color:var(--white);border-color:var(--muted)}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#0D0D0D}
+.vcount{font-family:var(--font-ui);letter-spacing:.14em;text-transform:uppercase;font-size:.85rem;color:var(--dim);margin-bottom:14px}
 
 /* ---- social ---- */
 .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
@@ -157,7 +179,7 @@ p+p{margin-top:14px}
   .hero{padding:52px 0 48px}
   .beta-pill{display:none}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.char:hover,.char:hover img{transform:none}*{transition:none!important;animation:none!important}}
 
 .eyebrow.y{color:var(--gold)}
 .brand img{height:44px}

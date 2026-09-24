@@ -41,15 +41,24 @@
     <p class="eyebrow y">The characters</p>
     <h2 id="ch-h"><span class="g">MEET THE</span> <span class="a">VOICES</span></h2>
     <p class="sub">Two demo voices, Shade and ISA Officer, come built into CaliberEngine. The rest are being finished and released over time.</p>
-    <div class="chars">
-      <article class="char"><img src="assets/portraits/shade.jpg" alt="Portrait of Shade" loading="lazy"><div class="body"><h3>Shade</h3><div class="who">Male · Demo pack included</div><p>Quiet, dry and hard to rattle.</p></div></article>
-      <article class="char"><img src="assets/portraits/isa-officer.jpg" alt="Portrait of the ISA Officer" loading="lazy"><div class="body"><h3>ISA Officer</h3><div class="who">Female · Demo pack included</div><p>Calm, professional, always on the mission.</p></div></article>
-      <article class="char"><img src="assets/portraits/spetsnaz.jpg" alt="Portrait of Spetsnaz" loading="lazy"><div class="body"><h3>Spetsnaz</h3><div class="who">Operator</div><p>Terse and disciplined.</p></div></article>
-      <article class="char"><img src="assets/portraits/convergence-7.jpg" alt="Portrait of Convergence-7" loading="lazy"><div class="body"><h3>Convergence-7</h3><div class="who">Sci-Fi · AI</div><p>An assistant AI with a sharp edge.</p></div></article>
-      <article class="char"><img src="assets/portraits/divergence-7.jpg" alt="Portrait of Divergence-7" loading="lazy"><div class="body"><h3>Divergence-7</h3><div class="who">Sci-Fi · Robotic</div><p>Androgynous and robotic, and not quite the same as Convergence-7.</p></div></article>
-      <article class="char"><img src="assets/portraits/apparition.jpg" alt="Portrait of the Apparition" loading="lazy"><div class="body"><h3>Apparition</h3><div class="who">Haunted</div><p>A whisper that seems to know where you are.</p></div></article>
-      <article class="char"><img src="assets/portraits/phantom.jpg" alt="Portrait of the Phantom" loading="lazy"><div class="body"><h3>Phantom</h3><div class="who">Haunted</div><p>Cold, close and quiet.</p></div></article>
+    <div id="voice-filters" class="filters"></div>
+    <p id="voice-count" class="vcount" aria-live="polite"></p>
+    <div id="voices" class="chars"></div>
+    <noscript><p class="sub">Turn on JavaScript to see the voices.</p></noscript>
+  </div></section>
+
+  <section id="buy" aria-labelledby="buy-h"><div class="wrap">
+    <p class="eyebrow y">Get the voices</p>
+    <h2 id="buy-h"><span class="g">BUY A</span> <span class="a">VOICE PACK</span></h2>
+    <div class="dl" style="margin-top:22px">
+      <div>
+        <h3><span class="g">CALIBER</span><span class="a">VOICE</span> packs</h3>
+        <p class="meta">Needs <b>CaliberEngine</b> · Windows 10 or 11 (64-bit)</p>
+        <p style="color:var(--white);margin-top:10px">Buy a pack on Steam or here on the Caliber site. Either way it shows up in CaliberEngine, ready to pick.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn primary" data-steam href="#">Buy on Steam</a><a class="btn" data-store href="#">Buy on CaliberSite</a></div>
     </div>
+    <p class="note warn" style="margin-top:18px"><b>Shade and ISA Officer demos are free.</b> They come with CaliberEngine, so you can hear a voice before you buy.</p>
   </div></section>
 
   <section aria-labelledby="rt-h"><div class="wrap">
@@ -80,5 +89,7 @@
 </div></footer>
 <script src="js/patchnotes-data.js"></script>
 <script src="js/site.js"></script>
+<script src="js/voices-data.js"></script>
+<script src="js/voices.js"></script>
 </body>
 </html>
