@@ -24,7 +24,17 @@
       '<span class="rating ' + ratingClass[v.rating] + '" aria-label="Rated ' + esc(v.rating) + '">' + esc(v.rating) + '</span>' +
       ((v.steam || v.store) ? '' : '<span class="demo soon">Coming soon</span>') +
       '</div><div class="body"><h3>' + esc(v.name) + '</h3><p>' + esc(v.desc) + '</p>' +
-      '<div class="tags">' + tags + '</div>' + buy + '</div></article>';
+      games(v) + '<div class="tags">' + tags + '</div>' + buy + '</div></article>';
+  }
+
+  // game packs line — first few always visible, the rest behind a "+N more" toggle
+  var GAMES_SHOWN = 5;
+  function games(v) {
+    if (!v.games || !v.games.length) return '';
+    var shown = v.games.slice(0, GAMES_SHOWN), rest = v.games.slice(GAMES_SHOWN);
+    return '<p class="games"><span class="glabel">Games</span> ' + shown.map(esc).join(' · ') +
+      (rest.length ? '<span class="grest" hidden> · ' + rest.map(esc).join(' · ') + '</span> ' +
+        '<button type="button" class="more" aria-expanded="false" data-label="+' + rest.length + ' more">+' + rest.length + ' more</button>' : '') + '</p>';
   }
 
   function matches(v) {
@@ -48,6 +58,14 @@
   audio.addEventListener('pause', stopped);
   grid.addEventListener('click', function (e) {
     if (e.target.closest('a')) return;
+    var more = e.target.closest('.more');
+    if (more) {
+      var open = more.getAttribute('aria-expanded') !== 'true';
+      more.previousElementSibling.hidden = !open;
+      more.setAttribute('aria-expanded', open);
+      more.textContent = open ? 'less' : more.getAttribute('data-label');
+      return;
+    }
     var cardEl = e.target.closest('.char.has-sample');
     if (!cardEl) return;
     var v = CALIBER_VOICES[+cardEl.querySelector('.play').getAttribute('data-voice')];
