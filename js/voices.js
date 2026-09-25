@@ -6,13 +6,13 @@
 
   var RATINGS = ['G', 'PG', 'PG-13', 'R'];
   var ratingClass = { 'G': 'g', 'PG': 'pg', 'PG-13': 'pg13', 'R': 'r' };
-  var state = { gender: null, rating: null, genre: null };
+  var state = { gender: null, rating: null, genre: null, game: null };
 
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 
   function card(v) {
     var tags = '<span class="tag hot">' + esc(v.gender) + '</span>' +
-      v.genres.map(function (g) { return '<span class="tag">' + esc(g) + '</span>'; }).join('');
+      abc(v.genres).map(function (g) { return '<span class="tag">' + esc(g) + '</span>'; }).join('');
     var buy = (v.steam || v.store) ? '<div class="buy">' +
       (v.steam ? '<a class="btn primary" href="' + esc(v.steam) + '" rel="noopener">Steam</a>' : '') +
       (v.store ? '<a class="btn" href="' + esc(v.store) + '">CaliberSite</a>' : '') + '</div>' : '';
@@ -29,9 +29,12 @@
 
   // game packs line — first few always visible, the rest behind a "+N more" toggle
   var GAMES_SHOWN = 5;
+  function abc(arr) { return arr.slice().sort(function (a, b) { return a.localeCompare(b, 'en', { sensitivity: 'base' }); }); }
+
   function games(v) {
     if (!v.games || !v.games.length) return '';
-    var shown = v.games.slice(0, GAMES_SHOWN), rest = v.games.slice(GAMES_SHOWN);
+    var list = abc(v.games);
+    var shown = list.slice(0, GAMES_SHOWN), rest = list.slice(GAMES_SHOWN);
     return '<p class="games"><span class="glabel">Games</span> ' + shown.map(esc).join(' · ') +
       (rest.length ? '<span class="grest" hidden> · ' + rest.map(esc).join(' · ') + '</span> ' +
         '<button type="button" class="more" aria-expanded="false" data-label="+' + rest.length + ' more">+' + rest.length + ' more</button>' : '') + '</p>';
@@ -40,7 +43,8 @@
   function matches(v) {
     return (!state.gender || v.gender === state.gender) &&
       (!state.rating || v.rating === state.rating) &&
-      (!state.genre || v.genres.indexOf(state.genre) !== -1);
+      (!state.genre || v.genres.indexOf(state.genre) !== -1) &&
+      (!state.game || (v.games || []).indexOf(state.game) !== -1);
   }
 
   var count = document.getElementById('voice-count');
@@ -83,7 +87,8 @@
   function uniq(arr) { return arr.filter(function (x, i) { return arr.indexOf(x) === i; }); }
   var genders = uniq(CALIBER_VOICES.map(function (v) { return v.gender; }));
   var ratings = RATINGS.filter(function (r) { return CALIBER_VOICES.some(function (v) { return v.rating === r; }); });
-  var genres = uniq([].concat.apply([], CALIBER_VOICES.map(function (v) { return v.genres; })));
+  var genres = abc(uniq([].concat.apply([], CALIBER_VOICES.map(function (v) { return v.genres; }))));
+  var gameList = abc(uniq([].concat.apply([], CALIBER_VOICES.map(function (v) { return v.games || []; }))));
 
   function group(key, label, values) {
     return '<div class="fgroup" role="group" aria-label="' + label + '"><span class="flabel">' + label + '</span>' +
@@ -93,8 +98,22 @@
       }).join('') + '</div>';
   }
 
+  // games get a dropdown — too many for a row of buttons
+  function dropdown(key, label, values) {
+    return '<div class="fgroup"><label class="flabel" for="f-' + key + '">' + label + '</label>' +
+      '<select id="f-' + key + '" class="fselect" data-key="' + key + '"><option value="">All games</option>' +
+      values.map(function (x) { return '<option value="' + esc(x) + '">' + esc(x) + '</option>'; }).join('') + '</select></div>';
+  }
+
   if (bar) {
-    bar.innerHTML = group('gender', 'Voice', genders) + group('rating', 'Rating', ratings) + group('genre', 'Genre', genres);
+    bar.innerHTML = group('gender', 'Voice', genders) + group('rating', 'Rating', ratings) + group('genre', 'Genre', genres) + dropdown('game', 'Game', gameList);
+    bar.addEventListener('change', function (e) {
+      var sel = e.target.closest('.fselect');
+      if (!sel) return;
+      state[sel.getAttribute('data-key')] = sel.value || null;
+      sel.classList.toggle('on', !!sel.value);
+      render();
+    });
     bar.addEventListener('click', function (e) {
       var b = e.target.closest('.chip');
       if (!b) return;
