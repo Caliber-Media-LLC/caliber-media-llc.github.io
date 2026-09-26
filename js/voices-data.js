@@ -69,5 +69,14 @@ var CALIBER_VOICES = [
     desc: 'A fierce woman warrior with a naginata and a grudge. Curses in Japanese.' },
   { name: 'Kage',               img: 'kage.jpg',                                                                          gender: 'Male',   rating: 'R',     genres: ['Samurai', 'Strategy'],
     games: ["Assassin's Creed Shadows", "Ghost of Tsushima", "Total War: Shogun 2"],
-    desc: 'A sly shinobi. You never see him coming. Curses in Japanese.' }
+    desc: 'A sly shinobi. You never see him coming. Curses in Japanese.' },
+  { name: 'Cole Harlan',        img: 'cole-harlan.jpg',                                                                   gender: 'Male',   rating: 'PG-13', genres: ['Western', 'FPS', 'Strategy'],
+    games: ["Red Dead Redemption 2", "Hunt: Showdown 1896", "Desperados III", "The Legend of California"],
+    desc: 'An outlaw with a price on his head and a dry sense of humor. Curses like the Old West.' },
+  { name: 'Ruby Maddox',        img: 'ruby-maddox.jpg',                                                                   gender: 'Female', rating: 'PG-13', genres: ['Western', 'FPS', 'Strategy'],
+    games: ["Red Dead Redemption 2", "Hunt: Showdown 1896", "Railway Empire 2", "Desperados III", "The Legend of California"],
+    desc: 'Runs the Gilded Spur Saloon, and the town. Keeps a shotgun under the bar. Curses like the Old West.' },
+  { name: 'Silas "Nugget" Pruitt', img: 'silas-pruitt.jpg',                                                               gender: 'Male',   rating: 'PG-13', genres: ['Western', 'Strategy', 'Survival'],
+    games: ["Red Dead Redemption 2", "Railway Empire 2", "The Legend of California"],
+    desc: 'An old 1849 gold miner still panning, full of tall tales. Curses like the Old West.' }
 ];
