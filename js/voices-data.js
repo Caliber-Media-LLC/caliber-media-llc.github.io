@@ -73,7 +73,7 @@ var CALIBER_VOICES = [
   { name: 'Cole Harlan',        img: 'cole-harlan.jpg',                                                                   gender: 'Male',   rating: 'PG-13', genres: ['Western', 'FPS', 'Strategy'],
     games: ["Red Dead Redemption 2", "Hunt: Showdown 1896", "Desperados III", "The Legend of California"],
     desc: 'An outlaw with a price on his head and a dry sense of humor. Curses like the Old West.' },
-  { name: 'Ruby Maddox',        img: 'ruby-maddox.jpg',                                                                   gender: 'Female', rating: 'R', genres: ['Western', 'FPS', 'Strategy'],
+  { name: 'Ruby Maddox',        img: 'ruby-maddox.jpg',                                                                   gender: 'Female', rating: 'PG-13', genres: ['Western', 'FPS', 'Strategy'],
     games: ["Red Dead Redemption 2", "Hunt: Showdown 1896", "Railway Empire 2", "Desperados III", "The Legend of California"],
     desc: 'Runs the Gilded Spur Saloon, and the town. Keeps a shotgun under the bar. Curses like the Old West.' },
   { name: 'Silas "Nugget" Pruitt', img: 'silas-pruitt.jpg',                                                               gender: 'Male',   rating: 'PG-13', genres: ['Western', 'Strategy', 'Survival'],
