@@ -30,5 +30,14 @@ var CALIBER_VOICES = [
     desc: 'A whisper that seems to know where you are.' },
   { name: 'Phantom',       img: 'phantom.jpg', samples: ['phantom-1.mp3', 'phantom-2.mp3'],       gender: 'Male',   rating: 'PG-13', genres: ['ARPG', 'RPG', 'MMO'],
     games: ["World of Warcraft", "Mistfall Hunter"],
-    desc: 'Cold, close and quiet.' }
+    desc: 'Cold, close and quiet.' },
+  { name: 'Thud Boulderson',    img: 'thud-boulderson.jpg', samples: ['thud-boulderson-1.mp3', 'thud-boulderson-2.mp3'],       gender: 'Male',   rating: 'G', genres: ['RPG'],
+    games: ["Everwind", "RuneScape: Dragonwilds"],
+    desc: 'A big, brave hero. Not the sharpest sword.' },
+  { name: 'Wren Sparkwright',   img: 'wren-sparkwright.jpg', samples: ['wren-sparkwright-1.mp3', 'wren-sparkwright-2.mp3'],     gender: 'Female', rating: 'G', genres: ['RPG'],
+    games: ["Everwind", "RuneScape: Dragonwilds"],
+    desc: 'A brilliant engineer. Too smart for her own good.' },
+  { name: 'Barnaby Fizzlewick', img: 'barnaby-fizzlewick.jpg', samples: ['barnaby-fizzlewick-1.mp3', 'barnaby-fizzlewick-2.mp3'], gender: 'Male',   rating: 'G', genres: ['RPG'],
+    games: ["Everwind", "RuneScape: Dragonwilds"],
+    desc: 'A cheerful old wizard. Almost too cheerful.' }
 ];
