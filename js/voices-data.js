@@ -56,9 +56,9 @@ var CALIBER_VOICES = [
     games: ["Valheim", "Assassin's Creed Valhalla", "Northgard", "God of War"],
     desc: 'A ruthless young warlord. His mind is the weapon. Curses in Norse/Norwegian.' },
   { name: 'Bosun Kaz Varga',    img: 'kaz-varga.jpg',                                                                     gender: 'Female', rating: 'R',     genres: ['Pirate'],
-    games: ["Sea of Thieves", "Windrose", "Skull and Bones"],
+    games: ["Sea of Thieves", "Windrose", "Skull and Bones", "World of Sea Battle", "Corsair Cove", "Naval Action", "Assassin's Creed IV Black Flag"],
     desc: 'Best blade on any ship, and everyone knows it.' },
   { name: 'Old Quartermaster',  img: 'old-quartermaster.jpg', samples: ['old-quartermaster-1.mp3', 'old-quartermaster-2.mp3'], gender: 'Male', rating: 'R',     genres: ['Pirate'],
-    games: ["Sea of Thieves", "Windrose", "Skull and Bones"],
+    games: ["Sea of Thieves", "Windrose", "Skull and Bones", "World of Sea Battle", "Corsair Cove", "Naval Action", "Assassin's Creed IV Black Flag"],
     desc: 'Keeps the books, splits the loot, locks up the rum.' }
 ];
