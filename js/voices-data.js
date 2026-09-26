@@ -60,5 +60,14 @@ var CALIBER_VOICES = [
     desc: 'Best blade on any ship, and everyone knows it.' },
   { name: 'Old Quartermaster',  img: 'old-quartermaster.jpg', samples: ['old-quartermaster-1.mp3', 'old-quartermaster-2.mp3'], gender: 'Male', rating: 'R',     genres: ['Pirate'],
     games: ["Sea of Thieves", "Windrose", "Skull and Bones", "World of Sea Battle", "Corsair Cove", "Naval Action", "Assassin's Creed IV Black Flag"],
-    desc: 'Keeps the books, splits the loot, locks up the rum.' }
+    desc: 'Keeps the books, splits the loot, locks up the rum.' },
+  { name: 'Kurogane Hayato',    img: 'kurogane-hayato.jpg',                                                               gender: 'Male',   rating: 'R',     genres: ['Samurai', 'Strategy', 'Survival'],
+    games: ["Onimusha: Way of the Sword", "Assassin's Creed Shadows", "Ghost of Tsushima", "Total War: Shogun 2", "Sengoku Dynasty"],
+    desc: 'An old masterless ronin. Weary, honorable, deadly. Curses in Japanese.' },
+  { name: 'Akane Tachibana',    img: 'akane-tachibana.jpg',                                                               gender: 'Female', rating: 'R',     genres: ['Samurai', 'Survival'],
+    games: ["Onimusha: Way of the Sword", "Assassin's Creed Shadows", "Ghost of Tsushima", "Sengoku Dynasty"],
+    desc: 'A fierce woman warrior with a naginata and a grudge. Curses in Japanese.' },
+  { name: 'Kage',               img: 'kage.jpg',                                                                          gender: 'Male',   rating: 'R',     genres: ['Samurai', 'Strategy'],
+    games: ["Assassin's Creed Shadows", "Ghost of Tsushima", "Total War: Shogun 2"],
+    desc: 'A sly shinobi. You never see him coming. Curses in Japanese.' }
 ];
