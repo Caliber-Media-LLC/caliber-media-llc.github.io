@@ -1,6 +1,20 @@
 {
   "releases": [
     {
+      "version": "0.9.1",
+      "label": "Beta",
+      "date": "September 26, 2026",
+      "sections": [
+        {
+          "name": "BUG FIXES",
+          "items": [
+            "Save Settings works again — saving could fail with \"set-hq-settings failed\" when one of the number settings (push-to-talk key, microphone, notification time) hadn't loaded yet. Those values are now skipped instead of breaking the whole save",
+            "The website download runs on its own again — it no longer asks you to launch Caliber Engine through Steam"
+          ]
+        }
+      ]
+    },
+    {
       "version": "0.9.0",
       "label": "Beta",
       "date": "September 19, 2026",
