@@ -150,5 +150,8 @@ var CALIBER_VOICES = [
     desc: 'A Goblin death knight who died in a bad deal and kept selling. Calls his undead army free labor. Curses in goblin money-talk.' },
   { name: 'Jinx Boomwrench', img: 'jinx-boomwrench.jpg', gender: 'Female', rating: 'PG-13', genres: ['MMO', 'RPG'],
     games: ["World of Warcraft"],
-    desc: 'A Goblin fire mage who rates every explosion out of ten. Curses in goblin money-talk.' }
+    desc: 'A Goblin fire mage who rates every explosion out of ten. Curses in goblin money-talk.' },
+  { name: 'Korrin Deepgrumble', img: 'korrin-deepgrumble.jpg', gender: 'Male', rating: 'R', genres: ['Survival', 'Co-op'],
+    games: ["The Lord of the Rings: Return to Moria", "Deep Rock Galactic"],
+    desc: 'A 300-year-old dwarf miner, half-deaf and half-drunk, with stories that never end. Still deadly. Curses like a sailor.' }
 ];
