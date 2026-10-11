@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>One-handed PC gaming with your voice — CaliberEngine | Caliber Media</title>
+<meta name="description" content="Play PC games with one hand. CaliberEngine turns spoken commands into key presses — reload, menus, abilities, mute — so your voice does the work of your other hand. Free Windows beta.">
+<meta property="og:title" content="One hand. Your voice does the rest.">
+<meta property="og:description" content="CaliberEngine turns your voice into game controls, built so one-handed players can play. Free Windows beta.">
+<meta property="og:image" content="assets/engine-hero.jpg">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="icon" href="assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+  .reasons{list-style:none;counter-reset:r;display:grid;gap:16px;margin-top:22px}
+  .reasons li{counter-increment:r;display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;background:var(--panel);border:1px solid var(--border);padding:20px 22px}
+  .reasons li::before{content:counter(r);font-family:var(--font-d);font-size:2.6rem;line-height:1;color:var(--gold)}
+  .reasons h3{font-size:1.45rem;margin-bottom:4px}
+  .reasons p{color:var(--white)}
+  .say{display:inline-block;font-family:var(--font-ui);font-weight:700;letter-spacing:.08em;color:var(--gold);border:1px solid var(--gold);background:rgba(255,204,1,.08);padding:0 8px;margin:0 2px;white-space:nowrap}
+  @media (max-width:620px){.reasons li{grid-template-columns:44px 1fr;gap:12px;padding:16px}.reasons li::before{font-size:2rem}}
+  @media (max-width:860px){.hero-grid{grid-template-columns:1fr!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="bar">
+  <a class="brand" href="index.html"><img src="assets/logo-bullet.png" alt=""><b>CALIBER<span class="v">VOICE</span></b></a>
+  <span class="beta-pill">BETA</span>
+  <nav aria-label="Main"><ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="engine.html">Engine</a></li>
+    <li><a href="voice.html">Voice</a></li>
+    <li><a href="community.html">Community</a></li>
+  </ul></nav>
+</div></header>
+
+<main id="main">
+  <section class="page-hero"><div class="wrap hero-grid" style="display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center">
+    <div>
+      <p class="eyebrow y">One-handed gaming</p>
+      <h1><span class="g">ONE HAND.</span><br><span class="a">YOUR VOICE DOES THE REST.</span></h1>
+      <p class="lead" style="margin-top:20px">Games expect two hands. CaliberEngine gives you a second one: say a command and it presses the key for you. Reload, heal, open the map, jump into a menu — without letting go of the controls you can reach.</p>
+      <div class="hero-actions">
+        <a class="btn primary" data-download href="#download">Download the free beta</a>
+        <a class="btn white" href="#reasons">See how it helps</a>
+      </div>
+    </div>
+    <div class="hero-art"><img src="assets/logo-engine-card-eq.png" width="851" height="649" alt="CaliberEngine — a jet turbine with a .50 caliber round at its center, with sound waves"></div>
+  </div></section>
+
+  <section id="reasons" aria-labelledby="r-h"><div class="wrap">
+    <p class="eyebrow y">Why it helps</p>
+    <h2 id="r-h"><span class="g">7 WAYS YOUR VOICE</span> <span class="a">TAKES THE OTHER HAND'S JOB</span></h2>
+    <ol class="reasons">
+      <li><div><h3>Say it, and the key is pressed</h3><p>Say <span class="say">reload</span> or <span class="say">quickslot one</span> and CaliberEngine sends the key to your game. The keys you'd have to stretch for become words instead.</p></div></li>
+      <li><div><h3>No talk button needed</h3><p>Leave it always listening and you never press a thing to talk. Prefer push-to-talk? Hold one key while you speak. Your choice.</p></div></li>
+      <li><div><h3>Pause it with your voice</h3><p>Say <span class="say">mute</span> to stop it acting on what you say — for a call, a snack, or a chat with the room. Say <span class="say">unmute</span> to carry on. No hands involved.</p></div></li>
+      <li><div><h3>Menus without the mouse hunt</h3><p>Teach it where a game's settings tabs are once, then say <span class="say">controls</span> or <span class="say">graphics</span> to jump straight there.</p></div></li>
+      <li><div><h3>One word for long commands</h3><p>Add your own abbreviations and quick phrases, so a short word can stand in for a longer command — and so words it mishears can be fixed your way.</p></div></li>
+      <li><div><h3>It watches your health so you don't have to</h3><p>Show it where your health bar is once, and it calls out when you drop past 75, 50 and 25 percent. It only reads your screen — never game memory.</p></div></li>
+      <li><div><h3>Your PC, by voice too</h3><p>PC Commands let you say a phrase to open a website, launch a program, or press a key combo — and get a spoken answer back.</p></div></li>
+    </ol>
+  </div></section>
+
+  <section aria-labelledby="setup-h"><div class="wrap">
+    <p class="eyebrow y">Fits your setup</p>
+    <h2 id="setup-h"><span class="g">KEEP WHAT WORKS.</span> <span class="a">ADD YOUR VOICE.</span></h2>
+    <div class="grid g3" style="margin-top:22px">
+      <article class="card feature"><h3>Every key is yours</h3><p>Each game gets its own profile with its own key bindings. Change any key so it matches the way you've set your game up.</p></article>
+      <article class="card feature"><h3>Profiles switch for you</h3><p>CaliberEngine can switch to the right profile when it sees your game start, so there's nothing to click before you play.</p></article>
+      <article class="card feature"><h3>Sits beside your gear</h3><p>It sends normal Windows keyboard input, so it works alongside the mouse, keypad or other controls you already use one-handed.</p></article>
+    </div>
+    <p class="sub" style="margin-top:26px">27 games have command sets checked against their real default keybinds — including World of Warcraft, Elden Ring, Valheim, Starfield and Escape from Tarkov. Every other game can use the general set. <a href="engine.html">See the full list →</a></p>
+  </div></section>
+
+  <section id="download" aria-labelledby="dl-h"><div class="wrap">
+    <div class="dl">
+      <div>
+        <p class="eyebrow y">Free beta</p>
+        <h3 id="dl-h"><span class="g">CALIBER</span><span class="a">ENGINE</span> <span data-version></span></h3>
+        <p class="meta">For <b>Windows 10 or 11 (64-bit)</b> · about 300 MB · a microphone</p>
+        <p style="color:var(--white);margin-top:10px">CaliberEngine is free. Speech recognition runs on your own PC — no account, no internet needed.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <a class="btn primary" data-download href="#">Download installer</a>
+        <a class="btn ghost" href="engine.html#install">Install steps</a>
+      </div>
+    </div>
+  </div></section>
+
+  <section aria-labelledby="honest-h"><div class="wrap">
+    <p class="eyebrow y">Straight talk</p>
+    <h2 id="honest-h"><span class="g">WHAT TO</span> <span class="a">EXPECT</span></h2>
+    <ul class="plist" style="max-width:74ch">
+      <li>Speech recognition is <b>English only</b>, on <b>Windows 10 and 11</b>.</li>
+      <li>It uses a small, fast speech model built for live play. A noisy room or a poor microphone can make it mishear you — push-to-talk helps.</li>
+      <li>Some competitive games with strict anti-cheat may not allow programs that send keys. Check a game's rules before ranked play.</li>
+      <li>It's a beta. Tell us what doesn't work for the way you play — that's exactly what we want to hear.</li>
+    </ul>
+  </div></section>
+
+  <section aria-labelledby="who-h"><div class="wrap">
+    <p class="eyebrow y">Who's behind it</p>
+    <h2 id="who-h"><span class="g">BUILT BY A PLAYER</span> <span class="a">WHO NEEDED IT</span></h2>
+    <p class="lead" style="color:var(--white)">Caliber Media is a one-person studio run by a retired Army veteran who games one-handed. CaliberEngine exists because a keyboard and mouse assume two hands — and they shouldn't have to.</p>
+    <p style="margin-top:22px"><a class="btn" href="community.html">Join the community</a></p>
+  </div></section>
+</main>
+
+<footer class="site-footer"><div class="wrap">
+  <div><b class="mg">Caliber Media LLC</b><p class="fine">&copy; <span id="year">2026</span> Caliber Media LLC. CaliberEngine and CaliberVoice are in beta and may change. Game names belong to their owners.</p></div>
+  <ul aria-label="Footer">
+    <li><a href="index.html">Home</a></li><li><a href="engine.html">Engine</a></li><li><a href="voice.html">Voice</a></li><li><a href="community.html">Community</a></li>
+    <li><a href="https://discord.gg/3MNS6QCTx2" rel="noopener">Discord</a></li><li><a href="mailto:support@calibervoice.com">Contact</a></li>
+  </ul>
+</div></footer>
+<script src="js/patchnotes-data.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
