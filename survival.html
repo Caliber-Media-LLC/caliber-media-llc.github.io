@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voice commands for survival games — Valheim, Rust, Icarus | CaliberEngine</title>
+<meta name="description" content="Build, craft and survive by voice. CaliberEngine presses the keys you say, with verified command sets for Valheim, Icarus, Rust and Minecraft, plus Viking, dwarf and frontier character voices. Free Windows beta.">
+<meta property="og:title" content="Survive by voice.">
+<meta property="og:description" content="Voice commands for survival games, with Viking, dwarf and frontier character voices. Free Windows beta.">
+<meta property="og:image" content="assets/logo-voice-card-eq4.png">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="icon" href="assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+  .reasons{list-style:none;counter-reset:r;display:grid;gap:16px;margin-top:22px}
+  .reasons li{counter-increment:r;display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;background:var(--panel);border:1px solid var(--border);padding:20px 22px}
+  .reasons li::before{content:counter(r);font-family:var(--font-d);font-size:2.6rem;line-height:1;color:var(--gold)}
+  .reasons h3{font-size:1.45rem;margin-bottom:4px}
+  .reasons p{color:var(--white)}
+  .say{display:inline-block;font-family:var(--font-ui);font-weight:700;letter-spacing:.08em;color:var(--gold);border:1px solid var(--gold);background:rgba(255,204,1,.08);padding:0 8px;margin:0 2px;white-space:nowrap}
+  .demo-voices .play{appearance:none;font:inherit}
+  @media (max-width:620px){.reasons li{grid-template-columns:44px 1fr;gap:12px;padding:16px}.reasons li::before{font-size:2rem}}
+  @media (max-width:860px){.hero-grid{grid-template-columns:1fr!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="bar">
+  <a class="brand" href="index.html"><img src="assets/logo-bullet.png" alt=""><b>CALIBER<span class="v">VOICE</span></b></a>
+  <span class="beta-pill">BETA</span>
+  <nav aria-label="Main"><ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="engine.html">Engine</a></li>
+    <li><a href="voice.html">Voice</a></li>
+    <li><a href="community.html">Community</a></li>
+  </ul></nav>
+</div></header>
+
+<main id="main">
+  <section class="page-hero"><div class="wrap hero-grid" style="display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center">
+    <div>
+      <p class="eyebrow y">Survival games</p>
+      <h1><span class="g">BUILD. CRAFT. SURVIVE.</span><br><span class="a">BY VOICE.</span></h1>
+      <p class="lead" style="margin-top:20px">Survival games pile up keys — hotbars, inventory, building, the map. CaliberEngine lets you say them instead, so your hands stay on the fight. And a Viking, a dwarf or an old prospector can keep you company on the long nights.</p>
+      <div class="hero-actions">
+        <a class="btn primary" data-download href="#download">Download the free beta</a>
+        <a class="btn white" href="#hear">Hear the voices</a>
+      </div>
+    </div>
+    <div class="hero-art"><img src="assets/logo-engine-card-eq.png" width="851" height="649" alt="CaliberEngine — a jet turbine with a .50 caliber round at its center, with sound waves"></div>
+  </div></section>
+
+  <section id="reasons" aria-labelledby="r-h"><div class="wrap">
+    <p class="eyebrow y">Why survival players use voice</p>
+    <h2 id="r-h"><span class="g">7 REASONS TO SURVIVE</span> <span class="a">WITH YOUR VOICE</span></h2>
+    <ol class="reasons">
+      <li><div><h3>Your hotbar, by voice</h3><p>Say <span class="say">quickslot one</span> and the key is pressed. Swap to food, a torch or a weapon without taking a hand off movement.</p></div></li>
+      <li><div><h3>Verified for Valheim, Icarus, Rust and Minecraft</h3><p>These games have command sets checked against their real default keybinds. Every other survival game can use the general set, and you can change any key.</p></div></li>
+      <li><div><h3>Menus without the mouse hunt</h3><p>Teach it where a game's settings tabs are once, then say <span class="say">controls</span> or <span class="say">graphics</span> to jump straight there.</p></div></li>
+      <li><div><h3>Look it up without alt-tabbing</h3><p>PC Commands let you say a phrase to open a website — like your favorite wiki or crafting guide — launch a program, or press a key combo.</p></div></li>
+      <li><div><h3>Health callouts in the dark</h3><p>Show it where your health bar is once, and it calls out when you drop past 75, 50 and 25 percent — so you know before it's too late.</p></div></li>
+      <li><div><h3>Built for long sessions and co-op</h3><p>Use push-to-talk so chatting with your crew doesn't fire commands, or say <span class="say">mute</span> to pause it and <span class="say">unmute</span> to carry on.</p></div></li>
+      <li><div><h3>Company for the long haul</h3><p>Vikings who curse in Norse, dwarves who curse in Dwarven, an 1849 gold miner full of tall tales. Pick a character that fits your world.</p></div></li>
+    </ol>
+  </div></section>
+
+  <section id="hear" aria-labelledby="hear-h"><div class="wrap">
+    <p class="eyebrow y">Survival voices</p>
+    <h2 id="hear-h"><span class="g">HEAR WHO'S</span> <span class="a">COMING WITH YOU</span></h2>
+    <p class="sub">Click a card to hear a sample. These packs are being finished and released over time; meet all of them on the <a href="voice.html">Voice</a> page.</p>
+    <div class="chars demo-voices" style="margin-top:22px">
+      <article class="char has-sample" data-sample="assets/voice-samples/wanderer-1.mp3">
+        <div class="pic"><img src="assets/portraits/the-wanderer.jpg" alt="The Wanderer, a Viking explorer-king character" loading="lazy"><span class="demo soon">Coming soon</span><span class="rating pg13">PG-13</span>
+          <button class="play" type="button" aria-label="Play a sample of The Wanderer">&#9654;</button></div>
+        <div class="body"><h3>The Wanderer</h3><p class="who">Viking · Valheim</p><p>A Viking explorer-king. Calm, dry and always looking past the horizon. Curses in Norse/Norwegian.</p></div>
+      </article>
+      <article class="char has-sample" data-sample="assets/voice-samples/shieldmaiden-1.mp3">
+        <div class="pic"><img src="assets/portraits/the-shieldmaiden.jpg" alt="The Shieldmaiden, a Viking warrior character" loading="lazy"><span class="demo soon">Coming soon</span><span class="rating pg13">PG-13</span>
+          <button class="play" type="button" aria-label="Play a sample of The Shieldmaiden">&#9654;</button></div>
+        <div class="body"><h3>The Shieldmaiden</h3><p class="who">Viking · Valheim</p><p>Holds the line and guards the hall. Curses in Norse/Norwegian.</p></div>
+      </article>
+      <article class="char has-sample" data-sample="assets/voice-samples/ironside-1.mp3">
+        <div class="pic"><img src="assets/portraits/ironside.jpg" alt="Ironside, a Viking warrior character" loading="lazy"><span class="demo soon">Coming soon</span><span class="rating r">R</span>
+          <button class="play" type="button" aria-label="Play a sample of Ironside">&#9654;</button></div>
+        <div class="body"><h3>Ironside</h3><p class="who">Viking · Valheim</p><p>Few words. Big axe. Keeps walking. Curses in Norse/Norwegian.</p></div>
+      </article>
+      <article class="char has-sample" data-sample="assets/voice-samples/brenna-coppervein-1.mp3">
+        <div class="pic"><img src="assets/portraits/brenna-coppervein.jpg" alt="Brenna Coppervein, a Dwarf hunter character" loading="lazy"><span class="demo soon">Coming soon</span><span class="rating pg13">PG-13</span>
+          <button class="play" type="button" aria-label="Play a sample of Brenna Coppervein">&#9654;</button></div>
+        <div class="body"><h3>Brenna Coppervein</h3><p class="who">Dwarf · Return to Moria · Deep Rock</p><p>A hunter and ruin explorer with a big rifle and a ram named Clover. Curses in Dwarven.</p></div>
+      </article>
+      <article class="char has-sample" data-sample="assets/voice-samples/korrin-deepgrumble-1.mp3">
+        <div class="pic"><img src="assets/portraits/korrin-deepgrumble.jpg" alt="Korrin Deepgrumble, an old Dwarf miner character" loading="lazy"><span class="demo soon">Coming soon</span><span class="rating r">R</span>
+          <button class="play" type="button" aria-label="Play a sample of Korrin Deepgrumble">&#9654;</button></div>
+        <div class="body"><h3>Korrin Deepgrumble</h3><p class="who">Dwarf · Return to Moria · Deep Rock</p><p>A 300-year-old miner, half-deaf and half-drunk, with stories that never end. Still deadly.</p></div>
+      </article>
+      <article class="char has-sample" data-sample="assets/voice-samples/silas-pruitt-1.mp3">
+        <div class="pic"><img src="assets/portraits/silas-pruitt.jpg" alt="Silas Nugget Pruitt, an old gold miner character" loading="lazy"><span class="demo soon">Coming soon</span><span class="rating pg13">PG-13</span>
+          <button class="play" type="button" aria-label="Play a sample of Silas Nugget Pruitt">&#9654;</button></div>
+        <div class="body"><h3>Silas "Nugget" Pruitt</h3><p class="who">Old West · Frontier survival</p><p>An 1849 gold miner still panning, full of tall tales. Curses like the Old West.</p></div>
+      </article>
+    </div>
+  </div></section>
+
+  <section id="download" aria-labelledby="dl-h"><div class="wrap">
+    <div class="dl">
+      <div>
+        <p class="eyebrow y">Free beta</p>
+        <h3 id="dl-h"><span class="g">CALIBER</span><span class="a">ENGINE</span> <span data-version></span></h3>
+        <p class="meta">For <b>Windows 10 or 11 (64-bit)</b> · about 300 MB · a microphone</p>
+        <p style="color:var(--white);margin-top:10px">CaliberEngine is free and comes with two demo voices. The survival packs above are sold separately and are coming soon.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <a class="btn primary" data-download href="#">Download installer</a>
+        <a class="btn ghost" href="engine.html#install">Install steps</a>
+      </div>
+    </div>
+  </div></section>
+
+  <section aria-labelledby="honest-h"><div class="wrap">
+    <p class="eyebrow y">Straight talk</p>
+    <h2 id="honest-h"><span class="g">WHAT TO</span> <span class="a">EXPECT</span></h2>
+    <ul class="plist" style="max-width:74ch">
+      <li>One spoken command presses one key, the same way your keyboard does. It doesn't play the game for you.</li>
+      <li>Speech recognition is <b>English only</b>, on <b>Windows 10 and 11</b>. A noisy room or a poor microphone can make it mishear you — push-to-talk helps.</li>
+      <li>Some online games with strict anti-cheat may not allow programs that send keys. Check a game's rules, especially on official servers.</li>
+      <li>Some voices are rated <b>R</b> for adult language. Every pack shows its rating, so you know before you pick.</li>
+      <li>The characters are Caliber Media originals. The voices are AI-generated with ElevenLabs from our own scripts.</li>
+      <li>It's a beta. Tell us in the Discord which survival game you want next.</li>
+    </ul>
+  </div></section>
+
+  <section aria-labelledby="who-h"><div class="wrap">
+    <p class="eyebrow y">Who's behind it</p>
+    <h2 id="who-h"><span class="g">A ONE-PERSON</span> <span class="a">STUDIO</span></h2>
+    <p class="lead" style="color:var(--white)">Caliber Media is a solo studio run by a retired Army veteran. Everything here is built one piece at a time, tested by real players, and released in the open.</p>
+    <p style="margin-top:22px"><a class="btn" href="community.html">Join the community</a></p>
+  </div></section>
+</main>
+
+<footer class="site-footer"><div class="wrap">
+  <div><b class="mg">Caliber Media LLC</b><p class="fine">&copy; <span id="year">2026</span> Caliber Media LLC. CaliberEngine and CaliberVoice are in beta and may change. Game names belong to their owners.</p></div>
+  <ul aria-label="Footer">
+    <li><a href="index.html">Home</a></li><li><a href="engine.html">Engine</a></li><li><a href="voice.html">Voice</a></li><li><a href="community.html">Community</a></li>
+    <li><a href="https://discord.gg/3MNS6QCTx2" rel="noopener">Discord</a></li><li><a href="mailto:support@calibervoice.com">Contact</a></li>
+  </ul>
+</div></footer>
+<script src="js/patchnotes-data.js"></script>
+<script src="js/site.js"></script>
+<script>
+  // Click-to-play for the voice cards (one clip at a time)
+  (function () {
+    let audio = null, playing = null;
+    document.querySelectorAll('.demo-voices .char').forEach(card => {
+      card.addEventListener('click', () => {
+        if (audio) { audio.pause(); playing.classList.remove('playing'); }
+        if (playing === card) { audio = playing = null; return; }
+        audio = new Audio(card.dataset.sample); playing = card;
+        card.classList.add('playing');
+        audio.addEventListener('ended', () => { card.classList.remove('playing'); audio = playing = null; });
+        audio.play();
+      });
+    });
+  })();
+</script>
+</body>
+</html>
